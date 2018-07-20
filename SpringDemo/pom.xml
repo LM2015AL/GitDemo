@@ -3,4 +3,31 @@
   <groupId>com.ludm</groupId>
   <artifactId>SpringDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>4.3.9.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>aspectj</groupId>
+  		<artifactId>aspectjrt</artifactId>
+  		<version>1.5.3</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.aspectj</groupId>
+  		<artifactId>aspectjweaver</artifactId>
+  		<version>1.8.10</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.aspectj</groupId>
+  		<artifactId>aspectjrt</artifactId>
+  		<version>1.8.10</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>aopalliance</groupId>
+  		<artifactId>aopalliance</artifactId>
+  		<version>1.0</version>
+  	</dependency>
+  </dependencies>
 </project>
