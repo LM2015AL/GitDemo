@@ -1,7 +1,96 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<display-name>Spring MVC Application</display-name>
+
+<!-- 	<context-param> -->
+<!-- 		<param-name>contextConfigLocation</param-name> -->
+<!-- 		<param-value>/WEB-INF/spring/*-servlet.xml</param-value> -->
+<!-- 	</context-param> -->
+<!-- 	<listener> -->
+<!-- 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> -->
+<!-- 	</listener> -->
+
+	<!-- 默认文件名 [servlet-name]-servlet.xml 默认位置 WebContent/WEB-INF -->
+	<servlet>
+		<servlet-name>SpringWebMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:SpringWebMVC-servlet.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>namespace</param-name>
+			<param-value>SpringWebMVC</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SpringWebMVC</servlet-name>
+		<url-pattern>/springwebmvc/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FormSubmit</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:FormSubmit-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FormSubmit</servlet-name>
+		<url-pattern>/formsubmit/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Redirect</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:Redirect-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Redirect</servlet-name>
+		<url-pattern>/redirect/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StaticPage</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:StaticPage-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StaticPage</servlet-name>
+		<url-pattern>/staticpage/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StaticPage</servlet-name>
+		<!-- TODO： 如何分级配置静态资源 -->
+		<url-pattern>/pages/staticpage/final.htm</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ExceptionHandler</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:ExceptionHandler-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ExceptionHandler</servlet-name>
+		<url-pattern>/exceptionhandler/*</url-pattern>
+	</servlet-mapping>
+
 </web-app>
