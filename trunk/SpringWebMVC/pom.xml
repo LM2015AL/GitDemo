@@ -8,6 +8,16 @@
   <name>SpringWebMVC Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-jdbc</artifactId>
+  		<version>4.3.9.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-tx</artifactId>
+  		<version>4.3.9.RELEASE</version>
+  	</dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-context</artifactId>
@@ -23,6 +33,31 @@
     	<artifactId>spring-webmvc</artifactId>
     	<version>4.3.9.RELEASE</version>
     </dependency>
+  	<dependency>
+  		<groupId>aspectj</groupId>
+  		<artifactId>aspectjrt</artifactId>
+  		<version>1.5.3</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.aspectj</groupId>
+  		<artifactId>aspectjweaver</artifactId>
+  		<version>1.8.10</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>8.0.11</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.aspectj</groupId>
+  		<artifactId>aspectjrt</artifactId>
+  		<version>1.8.10</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>aopalliance</groupId>
+  		<artifactId>aopalliance</artifactId>
+  		<version>1.0</version>
+  	</dependency>
     <dependency>
     	<groupId>log4j</groupId>
     	<artifactId>log4j</artifactId>
