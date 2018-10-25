@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="init1" default-destroy-method="destroy1">
+
+	<bean id="singletonBean" class="spring.ioc.SingletonBean" scope="singleton" parent="parentBean"
+		init-method="init" destroy-method="destroy">
+		<property name="value" value="singletonBean" />
+	</bean>
+	<bean id="prototypeBean" class="spring.ioc.PrototypeBean" scope="prototype" parent="parentBean">
+		<property name="value" value="prototypeBean" />
+	</bean>
+	<bean id="parentBean" class="spring.ioc.ParentBean" abstract="true">
+		<property name="parent" value="parentBean" />
+	</bean>
+
+	<bean id="postProcessor" class="spring.ioc.BeanPostProcessorImpl"/>
+	<bean id="postProcessor2" class="spring.ioc.BeanPostProcessorImpl2"/>
+</beans>

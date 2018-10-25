@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="arrayBean" class="spring.di.array.ArrayBean">
+		<property name="list">
+			<list>
+				<value>aaa</value>
+				<value>bbb</value>
+				<value>ccc</value>
+				<value>ddd</value>
+				<value></value>
+				<ref bean="baseDIBean"/>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>qqq</value>
+				<value>www</value>
+				<value>eee</value>
+				<value>rrr</value>
+				<value></value>
+				<ref bean="baseDIBean"/>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="a" value="aa"></entry>
+				<entry key="b" value="bb"></entry>
+				<entry key="c" value="cc"></entry>
+				<entry key="d" value="dd"></entry>
+				<entry key="e" value=""></entry>
+				<entry key="g"><null/></entry>
+				<entry key="bean" value-ref="baseDIBean"></entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="q">qq</prop>
+				<prop key="w">ww</prop>
+				<prop key="e">ee</prop>
+				<prop key="r">rr</prop>
+				<prop key="t"></prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="baseDIBean" class="spring.di.BaseDIBean"></bean>
+</beans>
